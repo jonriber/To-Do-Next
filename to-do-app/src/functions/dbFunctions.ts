@@ -1,7 +1,8 @@
 import { prisma } from "@/db"
 import { redirect } from "next/navigation"
-export const getTodos =async () => {
-    return prisma.todo.findMany()
+export const getTodos = async () => {
+    const todos = await prisma.todo.findMany()
+    return todos
 }
 
 export const createTodo =async (data:FormData) => {

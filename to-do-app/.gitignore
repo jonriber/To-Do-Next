@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/prisma
 # testing
 /coverage
 
@@ -36,4 +36,5 @@ next-env.d.ts
 
 #private
 .env
+
 dev.db*
