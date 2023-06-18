@@ -1,5 +1,5 @@
 import TodoItem from '@/components/TodoItem'
-import { getTodos } from '@/functions/dbFunctions'
+import { getTodos, toggleTodo } from '@/functions/dbFunctions'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -13,7 +13,7 @@ export default async function Home() {
     </header>  
     <ul className='pl-4'>
       {todos.map(todo => (
-        <TodoItem key={todo.id} {...todo} />
+        <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo}/>
       ))}
     </ul>
   </>
