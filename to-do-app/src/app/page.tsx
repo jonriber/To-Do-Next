@@ -1,9 +1,8 @@
-import { prisma } from '@/db'
-import Image from 'next/image'
+import { getTodos } from '@/functions/dbFunctions'
 import Link from 'next/link'
 
 export default async function Home() {
-  const todos = await prisma.todo.findMany()
+  const todos = await getTodos()
   return <>
     <header className='flex justify-between items-center mb-4'>
       <h1 className='text-2xl'>To-Dos</h1>
